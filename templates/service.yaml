@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "nodejs-on-openshift.fullname" . }}
+  labels:
+    {{- include "nodejs-on-openshift.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "nodejs-on-openshift.selectorLabels" . | nindent 4 }}
