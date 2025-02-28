@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "nodejs-on-openshift.fullname" . }}
+  name: {{ include "openshift-deployment.fullname" . }}
   labels:
-    {{- include "nodejs-on-openshift.labels" . | nindent 4 }}
+    {{- include "openshift-deployment.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "nodejs-on-openshift.selectorLabels" . | nindent 4 }}
+    {{- include "openshift-deployment.selectorLabels" . | nindent 4 }}
