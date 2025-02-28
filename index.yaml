@@ -11,4 +11,15 @@ entries:
     urls:
     - https://github.com/rhdh-demo-gh/helm-nodejs/releases/download/nodejs-on-openshift-0.1.0/nodejs-on-openshift-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-03T23:19:09.816203794Z"
+  openshift-deployment:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-02-28T23:01:20.896782029Z"
+    description: A Helm chart for Kubernetes
+    digest: ede992f3168102e3497aeb346563f206f507ead32dada740b0edf3ea350aafd9
+    name: openshift-deployment
+    type: application
+    urls:
+    - https://github.com/rhdh-demo-gh/helm-charts/releases/download/openshift-deployment-0.1.0/openshift-deployment-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-02-28T23:01:20.89679353Z"
